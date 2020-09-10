@@ -57,7 +57,7 @@ echo "Server = http://mirror.rol.ru/archlinux/\$repo/os/\$arch" >> /etc/pacman.d
 echo "Server = https://mirror.rol.ru/archlinux/\$repo/os/\$arch" >> /etc/pacman.d/mirrorlist
 echo "Server = http://archlinux.zepto.cloud/\$repo/os/\$arch" >> /etc/pacman.d/mirrorlist
 
-echo '0.5 Устанавливаем Arch Linux и основных пакетов'
+echo '0.5 Устанавливаем Arch Linux и основныe базовые пакетов'
 pacstrap /mnt base base-devel linux linux-firmware nano dhcpcd netctl
 
 echo '1.0 Настраиваем, монтируем, и входим в Arch-Chroot'
