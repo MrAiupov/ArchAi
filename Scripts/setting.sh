@@ -23,10 +23,15 @@ echo 'FONT=cyr-sun16' >> /etc/vconsole.conf
 echo '1.3 Создадаём загрузочный RAM диск'
 mkinitcpio -p linux
 
-echo '1.4.1 Устанавливаем загрузчик для GPT'
-pacman -Syy
-pacman -S grub efibootmgr os-prober grub-customizer --noconfirm
-grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
+echo "1.4.1 Установка GRUB на GPT или MBR раздел"
+read -p "1 - GPT, 0 - MBR: " vm_setting
+if [[ $vm_setting == 0 ]]; then
+  grub_install="wget git.io/JUWeg && sh JUWeg"
+elif [[ $vm_setting == 1 ]]; then
+  grub_install="wget git.io/JUWeB && sh JUWeB"
+fi
+echo 'Установка GRUB'
+$grub_install
 
 echo '1.4.2 Обновляем grub.cfg'
 grub-mkconfig -o /boot/grub/grub.cfg
