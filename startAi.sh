@@ -7,42 +7,15 @@ timedatectl set-ntp true
 loadkeys ru
 setfont cyr-sun16
 
-echo '0.2 Создание разделов'
-(
-  echo o;
-
-  echo n;
-  echo;
-  echo;
-  echo;
-  echo +1024M;
-
-  echo n;
-  echo;
-  echo;
-  echo;
-  echo +4096M;
-
-  echo n;
-  echo p;
-  echo;
-  echo;
-  echo a;
-  echo 1;
-
-  echo w;
-) | fdisk /dev/sda
-
-echo '0.2 Форматирование разделов'
-mkfs.fat -F32 /dev/sda1
-mkswap /dev/sda2
-mkfs.ext4 /dev/sda3
-
-echo '0.3 Создание и монтирование дисков'
-mount /dev/sda3 /mnt
-mkdir /mnt/boot
-mount /dev/sda1 /mnt/boot
-swapon /dev/sda2
+echo "0.2 Установка производится на диск с разметкой GPT или MBR?"
+read -p "1 - GPT, 0 - MBR: " vm_setting
+if [[ $vm_setting == 0 ]]; then
+  disk_install="wget git.io/JUC5C && sh JUC5C"
+elif [[ $vm_setting == 1 ]]; then
+  disk_install="wget git.io/JUC5C && sh JUC5C"
+fi
+echo 'Установка производится на диск с разметкой GPT или MBR?'
+$disk_install
 
 echo '0.4 Выбор зеркал России для загрузки.'
 echo "##" > /etc/pacman.d/mirrorlist
