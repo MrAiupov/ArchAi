@@ -115,5 +115,15 @@ fi
 echo 'Включить SDDM в автозагрузку?'
 systemctl $sddm_install
 
+echo "1.9.3 Включить AUR репозиторий?"
+read -p "1 - Да, 0 - Нет: " vm_setting
+if [[ $vm_setting == 0 ]]; then
+  aur_install="pacman -Syu"
+elif [[ $vm_setting == 1 ]]; then
+  aur_install="wget git.io/JUWf6 && sh JUWf6"
+fi
+echo 'Включить SDDM в автозагрузку?'
+$aur_install
+
 echo '2.0 Установка завершена! Перезагрузите систему.'
 exit
