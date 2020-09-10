@@ -70,7 +70,7 @@ read -p "1 - Да, 0 - Нет: " vm_setting
 if [[ $vm_setting == 0 ]]; then
   kde_install="gparted gnome-disk-utility screenfetch --noconfirm"
 elif [[ $vm_setting == 1 ]]; then
-  kde_install="plasma kdebase sddm sddm-kcm dolphin ark kate spectacle kcalc okular gnome-disk-utility gparted gwenview kde-gtk-config user-manager screenfetch --noconfirm"
+  kde_install="plasma-desktop sddm sddm-kcm plasma-pa konsole powerdevil kscreen khotkeys dolphin ark kate spectacle kcalc okular gnome-disk-utility gparted gwenview kde-gtk-config user-manager screenfetch --noconfirm"
 fi
 echo 'Ставим иксы и драйвера'
 pacman -S $kde_install
@@ -85,6 +85,17 @@ elif [[ $vm_setting == 1 ]]; then
 fi
 echo 'Установка дополнительный программ'
 $prog_install
+
+echo "1.8.3 Установить драйвера Nvidia?"
+echo "(chromium firefox firefox-i18n-ru opera opera-ffmpeg-codecs vlc elisa gimp krita kdenlive libreoffice libreoffice-fresh-ru obs-studio audacity qbittorrent inkscape handbrake)"
+read -p "1 - Да, 0 - Нет: " vm_setting
+if [[ $vm_setting == 0 ]]; then
+  nvidea_install="pacman -Syy"
+elif [[ $vm_setting == 1 ]]; then
+  nvidia_install="pacman -S nvidia vulkan-tools vulkan-icd-loader lib32-nvidia-utils lib32-vulkan-icd-loader --noconfirm"
+fi
+echo 'Установить драйвера Nvidia?'
+$nvidia_install
 
 echo '1.9.1 Подключаем автозагрузку менеджера входа и интернет'
 systemctl enable NetworkManager
