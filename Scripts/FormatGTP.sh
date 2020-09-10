@@ -1,4 +1,4 @@
-echo '0.2 Создание разделов'
+echo 'Создание разделов'
 (
   echo o;
 
@@ -24,12 +24,12 @@ echo '0.2 Создание разделов'
   echo w;
 ) | fdisk /dev/sda
 
-echo '0.2 Форматирование разделов'
+echo 'Форматирование разделов'
 mkfs.fat -F32 /dev/sda1
 mkswap /dev/sda2
 mkfs.ext4 /dev/sda3
 
-echo '0.3 Создание и монтирование дисков'
+echo 'Создание и монтирование дисков'
 mount /dev/sda3 /mnt
 mkdir /mnt/boot
 mount /dev/sda1 /mnt/boot
