@@ -1,3 +1,4 @@
+echo 'wget git.io/JUWeC && sh JUWeC'
 echo 'Создание разделов'
 (
   echo o;
