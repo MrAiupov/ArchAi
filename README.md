@@ -15,7 +15,7 @@
 (включать, только если согласились на установку KDE)
 
 ### Запуск скрипта<br/>
-Загружаемся в установщик Arch Linux, скаченного с официального сайта archlinux.org/download/.<br/>
+Загружаемся в установщик Arch Linux, скаченного с официального сайта [archlinux.org](http://archlinux.org/download/ "Arch Linux Downloads").<br/>
 Устанавливаем wget, для запуска скрипта.<br/>
 
     pacman -S wget  
