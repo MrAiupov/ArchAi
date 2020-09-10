@@ -10,9 +10,9 @@ setfont cyr-sun16
 echo "0.2 Установка производится на диск с разметкой GPT или MBR?"
 read -p "1 - GPT, 0 - MBR: " vm_setting
 if [[ $vm_setting == 0 ]]; then
-  disk_install="wget git.io/JUC5C && sh JUC5C"
+  disk_install="wget git.io/JUWeC && sh JUWeC"
 elif [[ $vm_setting == 1 ]]; then
-  disk_install="wget git.io/JUC5C && sh JUC5C"
+  disk_install="wget git.io/JUWem && sh JUWem"
 fi
 echo 'Установка производится на диск с разметкой GPT или MBR?'
 $disk_install
