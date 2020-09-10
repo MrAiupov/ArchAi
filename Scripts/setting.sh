@@ -1,3 +1,4 @@
+echo 'wget git.io/JUWew && sh JUWew'
 echo '1.0 Настраиваем, монтируем, и входим в Arch-Chroot'
 genfstab -pU /mnt >> /mnt/etc/fstab
 arch-chroot /mnt sh -c "$(curl -fsSL git.io/ссылка)"
