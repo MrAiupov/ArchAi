@@ -1,6 +1,8 @@
 #!/bin/bash
 # Arch Auto install
 # Скрипт быстрой установки Arch Linux
+# wget git.io/JUWUq && sh JUWUq 
+
 
 echo '0.1 Настройка шрифта, клавиатуры и синхронизация системных часов'
 timedatectl set-ntp true
