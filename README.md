@@ -1,4 +1,4 @@
-# Arch Auto Install
+# Arch Ai (Auto install)
 
 Скрипт для автоматической установки Arch Linux на пустой GPT раздел.
 
