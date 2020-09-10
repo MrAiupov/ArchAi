@@ -20,6 +20,6 @@
 
     pacman -S wget  
 
-Скачиваем и запускаем скрипт<br/>
+Скачиваем и запускаем скрипт, который я сократил через сервис [git.io](http://git.io "git.io").<br/>
 
     wget git.io/JUC5C && sh JUC5C
