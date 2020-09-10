@@ -1,4 +1,4 @@
-echo 'Включение AUR репозитория'
+echo 'wget git.io/JUWf6 && sh JUWf6'
 echo 'Включение AUR репозитория'
 sudo pacman -Syu
 mkdir -p /tmp/yay_install
