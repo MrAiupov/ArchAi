@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # wget git.io/JUWew && sh JUWew
 echo '1.0 Настраиваем, монтируем, и входим в Arch-Chroot'
 genfstab -pU /mnt >> /mnt/etc/fstab
