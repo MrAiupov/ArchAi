@@ -1,4 +1,4 @@
-echo 'wget git.io/JUWem && sh JUWem'
+# wget git.io/JUWem && sh JUWem
 echo 'Создание разделов'
 (
  echo g;
