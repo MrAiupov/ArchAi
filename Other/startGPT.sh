@@ -24,14 +24,14 @@ echo '0.2 Создание разделов '
  echo;
  echo;
  echo +4096M;
- echo y;
+ echo;
  
   
  echo n;
  echo;
  echo;
  echo;
- echo y;
+ echo;
   
  echo w;
 ) | fdisk /dev/sda
@@ -46,6 +46,8 @@ mount /dev/sda3 /mnt
 mkdir /mnt/boot
 mount /dev/sda1 /mnt/boot
 swapon /dev/sda2
+mkdir /mnt/hard1
+mount /dev/sdb1 /mnt/hard1
 
 echo '0.4 Выбор зеркал России для загрузки.'
 echo "##" > /etc/pacman.d/mirrorlist
