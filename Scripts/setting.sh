@@ -127,7 +127,7 @@ read -p "1 - Да, 0 - Нет: " vm_setting
 if [[ $vm_setting == 0 ]]; then
   aur_install="pacman -Syu"
 elif [[ $vm_setting == 1 ]]; then
-  aur_install="wget git.io/JUWf6 && sh JUWf6"
+  aur_install="wget git.io/JUWf6 && sh JUWf6 --noconfirm"
 fi
 echo 'Включить SDDM в автозагрузку?'
 $aur_install
