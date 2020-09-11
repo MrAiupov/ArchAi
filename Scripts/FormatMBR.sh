@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # wget git.io/JUWeC && sh JUWeC
 echo 'Создание разделов'
 (
