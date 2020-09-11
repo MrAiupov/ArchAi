@@ -1,28 +1,30 @@
 echo 'wget git.io/JUWem && sh JUWem'
 echo 'Создание разделов'
 (
-  echo g;
+ echo g;
 
-  echo n;
-  echo;
-  echo;
-  echo;
-  echo +1024M;
+ echo n;
+ echo ;
+ echo;
+ echo +1024M;
+ echo y;
+ echo t;
+ echo 1;
 
-  echo n;
-  echo;
-  echo;
-  echo;
-  echo +4096M;
-
-  echo n;
-  echo p;
-  echo;
-  echo;
-  echo a;
-  echo 1;
-
-  echo w;
+ echo n;
+ echo;
+ echo;
+ echo +4096M;
+ echo y;
+ 
+  
+ echo n;
+ echo;
+ echo;
+ echo;
+ echo y;
+  
+ echo w;
 ) | fdisk /dev/sda
 
 echo 'Форматирование разделов'
