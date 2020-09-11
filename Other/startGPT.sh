@@ -16,7 +16,7 @@ echo '0.2 Создание разделов '
  echo ;
  echo;
  echo +1024M;
- echo y;
+ echo;
  echo t;
  echo 1;
 
