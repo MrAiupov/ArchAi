@@ -1,4 +1,4 @@
-echo 'wget git.io/JUWew && sh JUWew'
+# wget git.io/JUWew && sh JUWew
 echo '1.0 Настраиваем, монтируем, и входим в Arch-Chroot'
 genfstab -pU /mnt >> /mnt/etc/fstab
 arch-chroot /mnt sh -c "$(curl -fsSL git.io/ссылка)"
@@ -20,8 +20,11 @@ echo '1.2.4 Вписываем KEYMAP=ru FONT=cyr-sun16'
 echo 'KEYMAP=ru' >> /etc/vconsole.conf
 echo 'FONT=cyr-sun16' >> /etc/vconsole.conf
 
-echo '1.3 Создадаём загрузочный RAM диск'
+echo '1.3.1 Создадаём загрузочный RAM диск'
 mkinitcpio -p linux
+
+echo '1.3.2 Устанавливаем wget'
+pacman -S wget --noconfirm
 
 echo "1.4.1 Установка GRUB на GPT или MBR раздел"
 read -p "1 - GPT, 0 - MBR: " vm_setting
