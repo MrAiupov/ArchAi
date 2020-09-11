@@ -1,4 +1,4 @@
-echo 'wget git.io/JUWeC && sh JUWeC'
+# wget git.io/JUWeC && sh JUWeC
 echo 'Создание разделов'
 (
   echo o;
@@ -6,15 +6,14 @@ echo 'Создание разделов'
   echo n;
   echo;
   echo;
-  echo;
   echo +4096M;
+  echo;
 
   echo n;
-  echo p;
   echo;
   echo;
-  echo a;
-  echo 1;
+  echo;
+  echo y;
 
   echo w;
 ) | fdisk /dev/sda
