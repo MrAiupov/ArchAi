@@ -65,4 +65,4 @@ pacstrap /mnt base base-devel linux linux-firmware nano dhcpcd netctl
 
 echo '1.0 Настраиваем, монтируем, и входим в Arch-Chroot'
 genfstab -pU /mnt >> /mnt/etc/fstab
-arch-chroot /mnt sh -c "$(curl -fsSL git.io/JUWew)"
+arch-chroot /mnt sh -c "$(curl -fsSL git.io/JUWDr)"
