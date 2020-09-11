@@ -125,7 +125,7 @@ fi
 echo 'Включить SDDM в автозагрузку?'
 systemctl $sddm_install
 
-echo "1.9.3 Включить AUR репозиторий?"
+echo "1.9.3 Включить AUR репозиторий? "
 read -p "1 - Да, 0 - Нет: " vm_setting
 if [[ $vm_setting == 0 ]]; then
   aur_install="pacman -Syu"
