@@ -1,4 +1,6 @@
-echo 'wget git.io/JUWeB && sh JUWeB'
+#!/bin/bash
+
+# wget git.io/JUWeB && sh JUWeB
 echo 'Устанавливаем загрузчик для GPT'
 pacman -Syy
 pacman -S grub efibootmgr os-prober grub-customizer --noconfirm
