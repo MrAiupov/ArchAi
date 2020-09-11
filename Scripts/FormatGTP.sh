@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # wget git.io/JUWem && sh JUWem
-echo 'Создание разделов'
+echo 'Создание разделов '
 (
  echo g;
 
